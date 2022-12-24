@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+.page-wrap.bgDark{
+    background-color: $main;
+    z-index: -3;
+}
+
+.bgDark{
+    background-color: $main;
+}
+
+.bgLight {
+    background-color: $white;
+}
+
+.light {
+    color: $white;
+}
+
+
+
+.btn.btnDark {
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover {
+        background-color: $black;
+        color: $black;
+    }
+
+
+    &::after {
+        border: 1px solid $white;
+    }
+
+}

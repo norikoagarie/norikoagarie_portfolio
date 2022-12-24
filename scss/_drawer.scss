@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+.drawer-hamburger{
+    padding: 20px;
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+    background-color: $red;
+    
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+    right: 0;
+}
+
+nav.drawer-nav {
+    background-color: $main;
+}
+
+.drawer-nav{
+    text-align: center;
+    padding: 60px;
+    
+    .drawer-menu-item{
+        color: $sub;
+        font-size: 14px;
+        font-family: $sans;
+        margin-bottom: 28px;
+        padding: 0;
+    }
+
+    .sns-link{
+        justify-content: center;
+        margin-top: 160px;
+    }
+}

@@ -1,0 +1,42 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.footer{
+    background-color: $main;
+    color: $white;
+    padding: 64px 128px 48px 128px;
+
+    @include mq(sp){
+        padding: 48px;
+
+    }
+    
+    &__logo img{
+        width: 30vw;
+
+        @include mq(sp){
+            
+            width: 70vw;
+            margin-top: 48px;
+            margin-bottom: 96px;
+        }
+    }
+
+    &-contact{
+        height: 0;
+
+        .sns-link{
+            display: flex;
+            justify-content: center;
+            padding-top: 64px;
+        }
+    }
+
+    .copyrights{
+        text-align: center;
+
+        @include mq(sp){
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.header{
+    background-color: $white;
+    height: 30vh;
+    width: 100vw;
+    padding-top: 64px;
+    padding-left: 128px;
+    padding-right: 128px;
+
+    &__logo img{
+        width: 30vw;
+    }
+
+    &-nav{
+        &__link{
+            display: inline-block;
+            padding-right: 32px;
+            margin-bottom: 48px;
+
+            transition: all .8s ease;
+
+            &:hover{
+                color: $red;
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+
+            &:last-child{
+                padding-right: 32px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include mq(sp){
+        display: none;
+    }
+}
+
+.sp-header{
+    display: none;
+    @include mq(sp){
+
+        background-color: $white;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+        height: 60px;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // position: fixed;
+        position: static;
+        z-index: 2;
+
+
+        &__logo{
+            width: 128px;
+        }
+        .hamburger{
+            display: flex;
+            flex-flow: column;
+            row-gap: 10px;
+
+            &__border{
+                background-color: $sub;
+                height: 2px;
+                width: 32px;
+            }
+        }
+    }
+}
+
+.drawer-menu-item{
+    display: inline-block;
+	    transition: all .2s ease;
+	    text-decoration: none;
+
+    &:hover{
+        color: $red;
+        cursor: pointer;
+	    transform: scale(1.3);
+    }
+}
