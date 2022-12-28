@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noriko Agarie portfolio</title>
+        <!-- webフォント -->
+        <!-- Googleフォント --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Kaisei+Opti:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+        <!-- font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- AOS.css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Vegas.css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vegas@2.5.4/dist/vegas.min.css">
+        <!-- drawer.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+        <!-- 自分のcssスタイルシート（基本的には一番下） -->
+        <link rel="stylesheet" href="./css/style.css">
+    
+        <!-- jquary -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+        <!-- AOS.js (common.jsの前に入れる、ここでないと使えない) -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Vegas.js -->
+        <script src="https://cdn.jsdelivr.net/npm/vegas@2.5.4/dist/vegas.min.js"></script>
+        <!-- iScroll .js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+        <!-- drawer.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+        <!-- vue.js -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- 自分のjsシート（基本的には一番下） -->
+        <script src="./js/common.js"></script>
+    
+        
+    </head>
+    <body class="drawer drawer--right">
+        <div id="app">
+            <div class="page-wrap" :class="{bgDark:darkMode}">
+    <!-- スマホヘッダー -->
+        <header>
+            <div class="sp-header" :class="{bgDark:darkMode}">
+                <h1>
+                    <a href="index.html"><img class="sp-header__logo" src="./img/ohisama_name_redred_sp2.png" alt="norikoagarieのロゴ"></a>
+                </h1>
+                <div class="hamburger drawer-toggle drawer-hamburger">
+                    <span class="drawer-hamburger-icon"></span>
+                </div>
+                <nav class="drawer-nav" role="navigation">
+                    <ul class="drawer-menu">
+                      <li><a class="drawer-menu-item" href="index.html#about">About</a></li>
+                      <li><a class="drawer-menu-item" href="index.html#works">Works</a></li>
+                      <li><a class="drawer-menu-item" href="webdesign.html">Web design</a></li>
+                      <li><a class="drawer-menu-item" href="dyeing.html">Dyeing</a></li>
+                      <li><a class="drawer-menu-item" href="index.html#contact">Contact</a></li>
+                      <li v-if="!darkMode" @click="changeToDark" class="drawer-menu-item"><i class="fas fa-moon"></i></li>
+                        <li v-else @click="changeToDark" class="drawer-menu-item"><i class="fas fa-sun"></i></li>
+                    </ul>
+                    <div class="sns-link">
+                        <a href="https://www.instagram.com/norikoagarie/" class="sns-link__icon"><i class="fa-brands fa-instagram"></i></a>                
+                        <a href="https://www.facebook.com/noriko.agarie" class="sns-link__icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/sungururo" class="sns-link__icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="index.html#contact" class="sns-link__icon"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                  </nav>
+            </div>
+        </header>
+    
+    <div class="page-wrap">
+        <header>
+            <div class="header" :class="{bgDark:darkMode}">
+                <h1 class="header__logo" data-aos="fade-up-right" data-aos-duration="3000">
+                    <a href="index.html"><img src="./img/ohisama-name_blue.png" alt="norikoagarie portfolioのロゴ"></a>
+                </h1>
+                <nav>
+                    <ul class="header-nav">
+                        <li class="header-nav__link"><a href="index.html#about">About</a></li>
+                        <li class="header-nav__link"><a href="index.html#works">Works</a></li>
+                        <li class="header-nav__link"><a href="dyeing.html">Dyeing</a></li>
+                        <li class="header-nav__link"><a href="index.html#contact">Contact</a></li>
+                        <li v-if="!darkMode" @click="changeToDark" class="drawer-menu-item"><i class="fas fa-moon"></i></li>
+                        <li v-else @click="changeToDark" class="drawer-menu-item"><i class="fas fa-sun"></i></li>
+                    </ul>
+                </nav>
+                <!-- 今できていない 動かす -->
+                <div class="sns-link">
+                    <a href="https://www.instagram.com/norikoagarie/" class="sns-link__icon sns-link__icon--primary"><i class="fa-brands fa-instagram"></i></a>                
+                    <a href="https://www.facebook.com/noriko.agarie" class="sns-link__icon sns-link__icon--primary"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/sungururo" class="sns-link__icon sns-link__icon--primary"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="index.html#contact" class="sns-link__icon sns-link__icon--primary"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrap">
+            <main>
+                <article>
+                    <a href="">
+                        <div class="product-content">
+                            <!-- <img class="product-content__img" :src="image" alt=""> -->
+                            <img class="product-content__img" src="./img/kobotosan_a.jpg" alt="">
+                            <!-- <h3 class="product-content__title">{{ product }}</h3> -->
+                            <h3 class="product-content__title">小人さん</h3>
+                            <!-- <p class="product-content__category">{{ category }}</p> -->
+                            <p class="product-content__category">草木染め</p>
+                            <!-- <p class="product-content__text">{{ text }}<div class=""></div></p> -->
+                            <p class="product-content__text">羊毛フェルトを草木染めしたもので制作しました。赤ちゃん用にとやさしいものでとすべて自然なもので作っています。中に鈴を入れて鳴るものもあります。手縫いでひとつずつお作りしています。<div class=""></div></p>
+                        </div>
+                    </a>
+                </article>
+                <div class="product-btn">
+                    <a href="dyeing.html" class="btn">一覧にもどる</a>
+                </div>
+            </main>   
+        </div>
+
+    <footer>
+        <div class="footer">
+            <h1 class="footer__logo" data-aos="fade-up" data-aos-duration="2000">
+                <a href="index.html"><img src="./img/ohisama-name_white.png" alt="norikoagarie portfolioのロゴ"></a>
+            </h1>
+            <div class="footer-contact">
+                <div class="sns-link">
+                    <a href="https://www.instagram.com/norikoagarie/" class="sns-link__icon sns-link__icon--primary"><i class="fa-brands fa-instagram"></i></a>                
+                    <a href="https://www.facebook.com/noriko.agarie" class="sns-link__icon sns-link__icon--primary"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/sungururo" class="sns-link__icon sns-link__icon--primary"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="index.html#contact" class="sns-link__icon sns-link__icon--primary"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyrights">
+                copyright * noriko agarie
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
