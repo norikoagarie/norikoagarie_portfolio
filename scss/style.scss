@@ -244,10 +244,11 @@ ul.header-nav {
         }
     }
     &-content{
-        // .img-box{
-        //     background-color: $sub;
-        //     overflow: hidden;
-        // }
+        .img-box{
+            background-color: $gray;
+            overflow: hidden;
+            // ここが入っていると立体感がなくなる
+        }
         text-align: center;
         width: 360px;
         margin-bottom: 40px;
@@ -267,11 +268,8 @@ ul.header-nav {
             transition: all .8s ease;
 
             &:hover{
-                transform: scale(1.4);
-                opacity: 0.9;
-                @include mq(sp){
-                    transform: scale(1.2);
-                }
+                transform: scale(1.2);
+                opacity: 0.5;
             }
             
             @include mq(sp){
