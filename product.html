@@ -43,7 +43,7 @@
     <body class="drawer drawer--right">
         <div id="app">
             <div class="page-wrap" :class="{bgDark:darkMode}">
-                    <!-- スマホヘッダー -->
+    <!-- スマホヘッダー -->
         <header>
             <div class="sp-header" :class="{bgDark:darkMode}">
                 <h1>
@@ -103,10 +103,14 @@
                 <article>
                     <a href="">
                         <div class="product-content">
-                            <img class="product-content__img" src="./img/IMG_4653.JPG" alt="">
-                            <!-- <p class="product-content__sub">草木染め</p> -->
-                            <h3 class="product-content__title"> ここには題名　草木染めワンピース　襟</h3>
-                            <p class="product-content__text">こどものワンピースに「お花のワンピース」を作っています。草木染めで黄色はふくぎ、青は藍、赤は茜、ピンク・紫はコチニールを重色しながら色を無限に作っていきます。その布を使用してお花のようにして襟を作りました。入学式・卒園式などにどうぞ。作り置きはなく、お好みの色をお伝えいただき受注制作いたします。<div class=""></div></p>
+                            <img class="product-content__img" :src="image" alt="">
+                            <!-- <img class="product-content__img" src="./img/IMG_4653.JPG" alt=""> -->
+                            <h3 class="product-content__title">{{ product }}</h3>
+                            <!-- <h3 class="product-content__title"> ここには題名　草木染めワンピース　襟</h3> -->
+                            <p class="product-content__category">{{ category }}</p>
+                            <!-- <p class="product-content__category">草木染め　子供服</p> -->
+                            <p class="product-content__text">{{ text }}<div class=""></div></p>
+                            <!-- <p class="product-content__text">こどものワンピースに「お花のワンピース」を作っています。草木染めで黄色はふくぎ、青は藍、赤は茜、ピンク・紫はコチニールを重色しながら色を無限に作っていきます。その布を使用してお花のようにして襟を作りました。入学式・卒園式などにどうぞ。作り置きはなく、お好みの色をお伝えいただき受注制作いたします。<div class=""></div></p> -->
                         </div>
                     </a>
                 </article>
