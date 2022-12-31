@@ -909,6 +909,10 @@ ul.header-nav {
   width: 360px;
   margin-bottom: 40px;
 }
+.works-content .img-box {
+  background-color: #707070;
+  overflow: hidden;
+}
 @media screen and (max-width:599px) {
   .works-content {
     height: initial;
@@ -924,13 +928,8 @@ ul.header-nav {
   transition: all 0.8s ease;
 }
 .works-content__img:hover {
-  transform: scale(1.4);
-  opacity: 0.9;
-}
-@media screen and (max-width:599px) {
-  .works-content__img:hover {
-    transform: scale(1.2);
-  }
+  transform: scale(1.2);
+  opacity: 0.5;
 }
 @media screen and (max-width:599px) {
   .works-content__img {
@@ -1123,9 +1122,11 @@ ul.header-nav {
   font-family: "Kaisei Opti";
   margin: 24px 0 16px 0;
 }
-.product-content__sub {
-  font-family: "Noto Serif JP";
-  margin-bottom: 28px;
+.product-content__category {
+  font-family: "Noto Sans JP";
+  font-weight: light;
+  font-size: 14px;
+  margin-bottom: 16px;
   color: #707070;
 }
 .product-content__text {
